@@ -12,61 +12,120 @@ h1 {
   font-size: 1.8rem;
 }
 
-/* Painel principal */
+/* =========================================
+   PAINEL PRINCIPAL DA GALERIA
+   ========================================= */
+
 #image {
   width: 90%;
   max-width: 700px;
   min-height: 380px;
   margin: 0 auto 30px auto;
+
   border: 4px solid #1a202c;
   border-radius: 12px;
+
   background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+
   display: flex;
   align-items: flex-end;
   justify-content: center;
+
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+
   overflow: hidden;
   padding: 15px;
 }
 
-/* Legenda com Tarja Preta (Acessibilidade) */
+/* =========================================
+   LEGENDA
+   Fundo preto + texto branco
+   ========================================= */
+
 #image span {
   background-color: #000000;
   color: #ffffff;
+
   font-size: 1.1rem;
   font-weight: bold;
+
   padding: 8px 16px;
   border-radius: 6px;
+
   line-height: 1.4;
+
   display: inline-block;
+
   max-width: 90%;
 }
 
-/* Galeria de miniaturas */
+/* =========================================
+   ÁREA DAS MINIATURAS
+   ========================================= */
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+
   gap: 15px;
+
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
 }
 
-.preview {
-  width: 120px;
-  height: 120px;
+/* =========================================
+   MINIATURAS
+   ========================================= */
+
+.gallery .preview {
+  width: 120px !important;
+  height: 120px !important;
+
+  min-width: 120px;
+  min-height: 120px;
+
+  max-width: 120px;
+  max-height: 120px;
+
   object-fit: cover;
+
+  display: block;
+
   border: 3px solid #4a5568;
   border-radius: 8px;
+
   cursor: pointer;
-  transition: transform 0.2s, border-color 0.2s;
+
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
 }
 
-/* Destaque tátil visível no foco de teclado e mouse */
-.preview:hover,
-.preview:focus {
+/* =========================================
+   FOCO E HOVER
+   Mouse + teclado (TAB)
+   ========================================= */
+
+.gallery .preview:hover,
+.gallery .preview:focus {
   border-color: #0056b3;
+
   transform: scale(1.08);
+
   outline: 4px solid #d97706;
+}
+
+/* =========================================
+   ACESSIBILIDADE
+   ========================================= */
+
+.gallery .preview:focus {
+  outline-offset: 2px;
 }
