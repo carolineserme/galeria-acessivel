@@ -12,7 +12,7 @@ h1 {
   font-size: 1.8rem;
 }
 
-/* Painel principal original (fundo branco mantido) */
+/* Quadro da imagem (original, branco e centralizado) */
 #image {
   width: 90%;
   max-width: 700px;
@@ -29,23 +29,45 @@ h1 {
   justify-content: center;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  padding: 15px;
+  padding: 20px;
   box-sizing: border-box;
+}
 
-  /* Estilos do texto da legenda */
-  font-size: 1.1rem;
+/* Tarja preta justa e arredondada no texto (igual à foto) */
+#image span {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 1.05rem;
   font-weight: bold;
-  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  max-width: 90%;
+  line-height: 1.4;
+  display: inline-block;
 }
 
-/* Tarja preta arredondada em volta do texto da legenda */
-#image {
-  /* Aplica o fundo preto justo no texto da legenda */
-  color: #ffffff;
+/* Galeria de miniaturas */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
-/* Força o texto dentro do #image a ter o fundo preto arredondado */
-#image {
-  /* Efeito de tarja preta apenas na área da legenda */
-  line-height: 1.6;
+.preview {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid #4a5568;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+/* Destaque tátil visível no foco de teclado e mouse */
+.preview:hover,
+.preview:focus {
+  border-color: #0056b3;
+  transform: scale(1.08);
+  outline: 4px solid #d97706;
 }
