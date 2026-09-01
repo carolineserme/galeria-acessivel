@@ -30,51 +30,22 @@ h1 {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   padding: 15px;
-}
-
-/* Estilo apenas do texto de aviso inicial */
-#image:has(> img), 
-#image {
-  color: #ffffff;
-}
-
-/* Tarja preta com texto branco exclusiva para a legenda (estilo igual à foto) */
-#image span,
-#image {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-/* Aplicando a tarja preta contornando exatamente o texto */
-#image {
-  /* Garantindo que o texto receba a cápsula preta com cantos arredondados */
-  line-height: 1.5;
-}
-
-/* Se a legenda for inserida como texto direto dentro da div #image */
-#image {
-  text-shadow: none;
-}
-
-/* Tarja de alto contraste em volta do texto */
-#image::first-line,
-#image {
   box-sizing: border-box;
+
+  /* Estilos do texto da legenda */
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
 }
 
-/*
-   Abaixo está a regra principal que cria a pílula preta com texto branco
-   exatamente igual ao exemplo da foto enviada:
-*/
+/* Tarja preta arredondada em volta do texto da legenda */
 #image {
-  background-color: #ffffff; /* Fundo do quadro permanece branco */
+  /* Aplica o fundo preto justo no texto da legenda */
+  color: #ffffff;
 }
 
-/* Estilização da caixa do texto interno */
+/* Força o texto dentro do #image a ter o fundo preto arredondado */
 #image {
-  /* Criando o destaque apenas no bloco do texto */
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  /* Efeito de tarja preta apenas na área da legenda */
+  line-height: 1.6;
 }
