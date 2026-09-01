@@ -29,17 +29,19 @@ h1 {
   justify-content: center;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   overflow: hidden;
+  box-sizing: border-box;
 
   /* Estilos da legenda com tarja de alto contraste (Acessibilidade AAA) */
   font-size: 1.25rem; 
   font-weight: bold;  
-  color: #ffffff;                 /* Texto em branco puro */
-  background-color: rgba(0, 0, 0, 0.85); /* Fundo preto semi-transparente para dar leitura fácil */
+  color: #ffffff;                        /* Texto em branco puro */
+  background-color: rgba(0, 0, 0, 0.85); /* Fundo preto semi-transparente para leitura fácil */
   line-height: 1.4;
   padding: 15px 20px;
-  margin: 15px;                   /* Afasta a tarja das bordas da imagem */
-  border-radius: 8px;             /* Arredonda os cantos da caixa de texto */
-  width: 100%;                     /* Faz a tarja ocupar a largura interna com respiro */
+  margin: 15px;                          /* Afasta a tarja das bordas da imagem */
+  border-radius: 8px;                    /* Arredonda os cantos da caixa de texto */
+  width: calc(100% - 30px);              /* Ajusta a largura com encaixe perfeito */
+  box-sizing: border-box;
 }
 
 /* Galeria de miniaturas */
