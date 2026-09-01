@@ -30,12 +30,16 @@ h1 {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 
-  /* Estilos da legenda de alto contraste */
-  font-size: 1.35rem; /* Letra bem maior */
-  font-weight: bold;  /* Letra grossa (negrito) */
-  color: #000000;     /* Preto puro para contraste máximo */
-  line-height: 1.5;
-  padding: 20px;
+  /* Estilos da legenda com tarja de alto contraste (Acessibilidade AAA) */
+  font-size: 1.25rem; 
+  font-weight: bold;  
+  color: #ffffff;                 /* Texto em branco puro */
+  background-color: rgba(0, 0, 0, 0.85); /* Fundo preto semi-transparente para dar leitura fácil */
+  line-height: 1.4;
+  padding: 15px 20px;
+  margin: 15px;                   /* Afasta a tarja das bordas da imagem */
+  border-radius: 8px;             /* Arredonda os cantos da caixa de texto */
+  width: 100%;                     /* Faz a tarja ocupar a largura interna com respiro */
 }
 
 /* Galeria de miniaturas */
