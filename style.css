@@ -12,7 +12,7 @@ h1 {
   font-size: 1.8rem;
 }
 
-/* Painel principal com destaque de caixa alta visibilidade */
+/* Painel principal original (fundo branco mantido) */
 #image {
   width: 90%;
   max-width: 700px;
@@ -29,43 +29,52 @@ h1 {
   justify-content: center;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  box-sizing: border-box;
+  padding: 15px;
+}
 
-  /* Estilos da legenda com tarja de alto contraste (Acessibilidade AAA) */
-  font-size: 1.25rem; 
-  font-weight: bold;  
-  color: #ffffff;                        /* Texto em branco puro */
-  background-color: rgba(0, 0, 0, 0.85); /* Fundo preto semi-transparente para leitura fácil */
-  line-height: 1.4;
-  padding: 15px 20px;
-  margin: 15px;                          /* Afasta a tarja das bordas da imagem */
-  border-radius: 8px;                    /* Arredonda os cantos da caixa de texto */
-  width: calc(100% - 30px);              /* Ajusta a largura com encaixe perfeito */
+/* Estilo apenas do texto de aviso inicial */
+#image:has(> img), 
+#image {
+  color: #ffffff;
+}
+
+/* Tarja preta com texto branco exclusiva para a legenda (estilo igual à foto) */
+#image span,
+#image {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Aplicando a tarja preta contornando exatamente o texto */
+#image {
+  /* Garantindo que o texto receba a cápsula preta com cantos arredondados */
+  line-height: 1.5;
+}
+
+/* Se a legenda for inserida como texto direto dentro da div #image */
+#image {
+  text-shadow: none;
+}
+
+/* Tarja de alto contraste em volta do texto */
+#image::first-line,
+#image {
   box-sizing: border-box;
 }
 
-/* Galeria de miniaturas */
-.gallery {
+/*
+   Abaixo está a regra principal que cria a pílula preta com texto branco
+   exatamente igual ao exemplo da foto enviada:
+*/
+#image {
+  background-color: #ffffff; /* Fundo do quadro permanece branco */
+}
+
+/* Estilização da caixa do texto interno */
+#image {
+  /* Criando o destaque apenas no bloco do texto */
   display: flex;
-  flex-wrap: wrap;
+  align-items: flex-end;
   justify-content: center;
-  gap: 15px;
-}
-
-.preview {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border: 3px solid #4a5568;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s, border-color 0.2s;
-}
-
-/* Destaque tátil visível no foco de teclado e mouse */
-.preview:hover,
-.preview:focus {
-  border-color: #0056b3;
-  transform: scale(1.08);
-  outline: 4px solid #d97706;
 }
