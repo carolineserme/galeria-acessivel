@@ -1,3 +1,18 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  text-align: center;
+  padding: 20px;
+  color: #1a202c;
+}
+
+h1 {
+  color: #1a202c;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+/* Painel principal */
 #image {
   width: 90%;
   max-width: 700px;
@@ -17,7 +32,7 @@
   padding: 15px;
 }
 
-/* Tarja preta com letras brancas (Acessibilidade) */
+/* Legenda com Tarja Preta (Acessibilidade) */
 #image span {
   background-color: #000000;
   color: #ffffff;
@@ -28,4 +43,30 @@
   line-height: 1.4;
   display: inline-block;
   max-width: 90%;
+}
+
+/* Galeria de miniaturas */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.preview {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid #4a5568;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+/* Destaque tátil visível no foco de teclado e mouse */
+.preview:hover,
+.preview:focus {
+  border-color: #0056b3;
+  transform: scale(1.08);
+  outline: 4px solid #d97706;
 }
