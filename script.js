@@ -1,12 +1,12 @@
 function upDate(previewPic) {
   const displayBox = document.getElementById('image');
-  displayBox.innerText = previewPic.alt;
+  displayBox.innerHTML = `<span>${previewPic.alt}</span>`;
   displayBox.style.backgroundImage = `url('${previewPic.src}')`;
 }
 
 function unDo() {
   const displayBox = document.getElementById('image');
-  displayBox.innerText = "Passe o mouse ou navegue com a tecla Tab sobre uma imagem abaixo.";
+  displayBox.innerHTML = `<span>Passe o mouse ou navegue com a tecla Tab sobre uma imagem abaixo.</span>`;
   displayBox.style.backgroundImage = "url('')";
 }
 
